@@ -22,6 +22,6 @@ pub extern "C" fn init() {
 }
 
 #[unsafe(no_mangle)]
-pub extern "C" fn update(dt: f32) {
-    log(&format!("I'm a module... {}", dt));
+pub extern "C" fn update(_dt: f32) {
+    return;
 }

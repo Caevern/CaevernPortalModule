@@ -6,8 +6,9 @@ pub extern "C" fn init() {
 
     let portal = game::get_element_by_name("portal");
     if let Some(portal) = portal {
-        log(&format!("Portal: {}", portal.get_id()));
-        portal.set_position(6.0, 1.0, 2.0);
+        log(&format!("Portal ID: {}", portal.get_id()));
+        let portal_position = portal.get_position();
+        log(&format!("Portal position: {:?}", portal_position));
     } else {
         log("No portal found");
     }
